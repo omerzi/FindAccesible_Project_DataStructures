@@ -1,5 +1,8 @@
+#ifndef __NODE_H
+#define __NODE_H
 #pragma warning (disable:4996)
-typedef int Type;
+#include "ItemType.h"
+typedef ItemType Type;
 
 class Node
 {
@@ -16,3 +19,5 @@ public: // methods:
 
 	
 };
+
+#endif

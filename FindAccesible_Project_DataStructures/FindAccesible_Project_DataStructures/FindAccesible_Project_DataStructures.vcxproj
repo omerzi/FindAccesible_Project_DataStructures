@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Computers_Network.cpp" />
+    <ClCompile Include="ItemType.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Stack.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Computers_Network.h" />
+    <ClInclude Include="ItemType.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Static_List.h" />

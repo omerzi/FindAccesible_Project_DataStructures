@@ -1,3 +1,6 @@
+#ifndef __STATICLIST_H
+#define __STATICLIST_H
+
 #include "Static_Node.h"
 #include <iostream>
 
@@ -5,7 +8,6 @@
 #define NON_EXIST -1;
 using namespace std; 
 class StaticList
-
 {
 private: //members:
 	StaticNode * list;
@@ -21,9 +23,11 @@ public: // methods:
 	void InsertAfter(int new_node_value, int index_of_node_to_insertAfter); // insert after current node
 	void DeleteAfter(int index_of_node_to_deleteAfter); // delete after current node
 	bool isEmpty();
+	void printList();
 	StaticNode* getList();
 	int getHeadFree();
 	int getHeadList();
 	int getTail();
 	//Do : all List required functions (find,head....)
 };
+#endif

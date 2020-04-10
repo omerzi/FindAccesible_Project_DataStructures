@@ -6,6 +6,11 @@ StaticNode::StaticNode(int value, int nextNode)
 	this->nextNode = nextNode;
 }
 
+StaticNode::~StaticNode()
+{
+}
+
+
 int StaticNode::getNextNode()
 {
 	return this->nextNode;

@@ -11,6 +11,5 @@ int main()
 	network.network_data_input();
 	cout << "Please enter the head computer index: " << endl;
 	cin >> headComputerIndex;
-	network.FindAccesible_Rec(headComputerIndex);
-
+	StaticList * list  = network.FindAccesible_Rec(headComputerIndex);
 }

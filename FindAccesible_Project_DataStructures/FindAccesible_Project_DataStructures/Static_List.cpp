@@ -4,12 +4,12 @@
 //Constructor:
 StaticList::StaticList(int array_size)
 {
-	MakeEmpty(array_size);// size -1
+	MakeEmpty(array_size-1);// -2 because computer can't send to itself and we are starting from index 1
 }
 
 StaticList::~StaticList()
 {
-	delete this->list;
+	delete[] list;
 }
 
 //Initiallizing an empty freelist:
@@ -57,6 +57,17 @@ bool StaticList::isEmpty()
 	if (this->headList == -1) //NON-EXIST
 		return true;
 	return false;
+}
+
+void StaticList::printList()
+{
+	int current_index_list = this->headList;
+	while (this->list[current_index_list].getNextNode() != -1)
+	{
+		cout << this->list[current_index_list].getComputerNumber() << " ";
+		current_index_list = this->list[current_index_list].getNextNode();
+	}
+	cout << this->list[current_index_list].getComputerNumber() << " ";
 }
 
 StaticNode* StaticList::getList()

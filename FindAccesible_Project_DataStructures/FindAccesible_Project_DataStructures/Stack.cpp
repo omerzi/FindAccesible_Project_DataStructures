@@ -40,15 +40,14 @@ void Stack::Push(Type i_item)
 //Pop method : return the node in the top of the stack, return nullptr if empty
 Type Stack::Pop()
 {
-	if (isEmpty())
+	if (!isEmpty())
 	{
-		return 0; // Stack is empty, there is no top node to return
+		Node* tempNode = this->top;
+		Type item = this->top->value;
+		this->top = this->top->nextNode;
+		delete tempNode;
+		return item;
 	}
-	Node* tempNode = this->top;
-	Type item = this->top->value;
-	this->top = this->top->nextNode;
-	delete tempNode;
-	return item;
 }
 
 //top method : return the top of the stack

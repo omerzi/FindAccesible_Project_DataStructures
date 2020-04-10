@@ -1,5 +1,7 @@
-#include "Node.h"
+#ifndef __STACK_H
+#define __STACK_H
 
+#include "Node.h"
 class Stack
 {
 private: //members:
@@ -14,3 +16,5 @@ public: //methods:
 	Type Pop();
 	Node * Top();
 };
+
+#endif
